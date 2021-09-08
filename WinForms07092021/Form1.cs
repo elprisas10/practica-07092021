@@ -28,10 +28,11 @@ namespace WinForms07092021
             dgData.Columns.Add("firstName", "Nombre");
             dgData.Columns.Add("lastName", "Apellido");
             dgData.Columns.Add("age", "Edad");
+            dgData.Columns.Add("gender", "Genero");
 
             foreach (var student in selectAllData())
             {
-                dgData.Rows.Add(student.idStudent, student.firstName, student.lastName, student.age);
+                dgData.Rows.Add(student.idStudent, student.firstName, student.lastName, student.age, student.gender);
             }
 
         }
@@ -46,6 +47,7 @@ namespace WinForms07092021
                     firstName = student.firstName,
                     lastName = student.lastName,
                     age = student.age,
+                    gender = student.gender,
                 }
 
                 ).ToList();
